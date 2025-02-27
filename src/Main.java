@@ -24,6 +24,25 @@ public class Main {
         }
     }
 
+    public static int deliveryTimeCalculation(int deliveryDistance) {
+        int distance1 = 20;
+        int distance2 = 60;
+        int distance3 = 100;
+        int days = 0;
+        if (deliveryDistance <= distance1) {
+            days = 1;
+            return days;
+        } else if (deliveryDistance > distance1 && deliveryDistance <= distance2) {
+            days = 2;
+            return days;
+        } else if (deliveryDistance > distance2 && deliveryDistance <= distance3) {
+            days = 3;
+            return days;
+        } else {
+            return days;
+        }
+    }
+
     public static void main(String[] args) {
         //Задача №1
         System.out.println("Задача №1:");
@@ -35,5 +54,16 @@ public class Main {
         int deviceYear = 2025;
         int OS = 0;
         getOS(OS, deviceYear);
+
+        //Задача №3
+        System.out.println("Задача №3:");
+        int distance = 95;
+        int time = deliveryTimeCalculation(distance);
+        if (time != 0) {
+            System.out.println("Потребуется дней доставки: " + time);
+        } else {
+            System.out.println("Доставки нет.");
+        }
+
     }
 }
