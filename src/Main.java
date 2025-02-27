@@ -3,7 +3,7 @@ import java.util.Locale;
 
 public class Main {
 
-    public static void getYear(int meansYear) {
+    public static void determineYearValue(int meansYear) {
         if ((meansYear % 400) == 0 || (meansYear % 4 == 0 && meansYear % 100 != 0)) {
             System.out.println(meansYear + " год является високосным");
         } else {
@@ -47,7 +47,7 @@ public class Main {
         //Задача №1
         System.out.println("Задача №1:");
         int year = 2024;
-        getYear(year);
+        determineYearValue(year);
 
         //Задача №2
         System.out.println("Задача №2:");
